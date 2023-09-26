@@ -4,6 +4,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
   let currentValue = "";
 
+// repalce the buttons to perform actual operation
+// example : "×" is Not multiplication but "*" is considered as multiplication.
+
   function evaluateResult() {
     const convertedValue = currentValue
       .replace("×", "*")
@@ -17,6 +20,8 @@ document.addEventListener("DOMContentLoaded", function () {
       .replace("π", "Math.PI")
       .replace("e", "2.71828182846");
 
+// eval is predefined function that calculates whatever it is given
+// Note : it is not safe to use in serious projects bcoz of privacy
     const result = eval(convertedValue);
     currentValue = result.toString();
     display.value = currentValue;
@@ -27,6 +32,8 @@ document.addEventListener("DOMContentLoaded", function () {
     button.addEventListener("click", function () {
       const value = button.innerText;
 
+      // try catch is used to alert user if he puts some undoable operation 
+      
       try {
         if (value == "AC") {
           currentValue = "";
