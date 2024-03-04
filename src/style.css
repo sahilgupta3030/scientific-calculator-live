@@ -1,14 +1,13 @@
 body {
     background: antiquewhite;
 }
+.container{
+    margin-top: 100px;
+}
 
 .card {
     background: #224662;
     border-radius: 5px;
-}
-
-.container{
-    margin-top: 100px;
 }
 
 #calc-display {
