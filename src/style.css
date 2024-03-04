@@ -7,6 +7,10 @@ body {
     border-radius: 5px;
 }
 
+.container{
+    margin-top: 100px;
+}
+
 #calc-display {
     background: #e0e0e0;
     height: 55px;
